@@ -1,20 +1,28 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) {
-         bar(1 + 5)
-      }
+    title= "Photo Gallery"
+    link(href='../css/styles.css' rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet')
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
+    #container
+      #topo
+        img#logo(src='../img/logo.png' alt='Logo')
+        ul#sprite_menu
+          li#menu_home.active
+            a(href='#') Home
+          li#menu_about
+            a(href='#') About
+          li#menu_services
+            a(href='#') Services
+          li#menu_contact
+            a(href='#') Contact
+      h1 Photo Gallery
       p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+        This Photo Gallery is a collection of Beautiful nature pictures
+        including many species of animals
+      #gallery
+    #modal_div
+      img(id='modal_img' src='')
+    script(src='../javascript/scripts.js')

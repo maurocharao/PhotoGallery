@@ -1,47 +1,40 @@
-(function() {
-  var cubes, list, math, num, number, opposite, race, square,
-    __slice = [].slice;
+var AddEvent, el, htm, liClick, modalClick, num_fotos, x, _i, _j, _len, _ref;
 
-  number = 42;
+num_fotos = 50;
 
-  opposite = true;
-
-  if (opposite) {
-    number = -42;
+AddEvent = function(elem, event_name, cb) {
+  if (elem.addEventListener) {
+    return elem.addEventListener(event_name, cb, false);
+  } else if (elem.attachEvent) {
+    return elem.attachEvent("on" + event_name, cb);
   }
+};
 
-  square = function(x) {
-    return x * x;
-  };
+liClick = function() {
+  document.getElementById('modal_img').src = this.src.replace('_thumb', '');
+  return document.getElementById('modal_div').style.display = 'block';
+};
 
-  list = [1, 2, 3, 4, 5];
+modalClick = function() {
+  return document.getElementById('modal_div').style.display = 'none';
+};
 
-  math = {
-    root: Math.sqrt,
-    square: square,
-    cube: function(x) {
-      return x * square(x);
-    }
-  };
+modalClick();
 
-  race = function() {
-    var runners, winner;
-    winner = arguments[0], runners = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-    return print(winner, runners);
-  };
+AddEvent(document.getElementById('modal_div'), 'click', modalClick);
 
-  if (typeof elvis !== "undefined" && elvis !== null) {
-    alert("I knew it!");
-  }
+htm = '<ul>\n';
 
-  cubes = (function() {
-    var _i, _len, _results;
-    _results = [];
-    for (_i = 0, _len = list.length; _i < _len; _i++) {
-      num = list[_i];
-      _results.push(math.cube(num));
-    }
-    return _results;
-  })();
+for (x = _i = 1; _i <= num_fotos; x = _i += 1) {
+  htm += '  <li><img id="foto_' + x + '" src="../img/img_' + (x < 10 ? '0' : '') + x + '_thumb.jpg"></li>\n';
+}
 
-}).call(this);
+htm += '</ul\n';
+
+document.getElementById('gallery').innerHTML = htm;
+
+_ref = document.querySelectorAll("#gallery > ul > li > img");
+for (_j = 0, _len = _ref.length; _j < _len; _j++) {
+  el = _ref[_j];
+  AddEvent(el, 'click', liClick);
+}

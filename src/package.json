@@ -1,0 +1,42 @@
+{
+  "name": "PhotoGallery",
+  "description": "Responsive Photo Gallery",
+  "version": "1.0.0",
+  "homepage": "https://github.com/maurocharao/PhotoGallery",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maurocharao/PhotoGallery"
+  },
+  "author": "Mauro César Charão dos Santos <maurocharao@gmail.com>",
+  "tags": [
+    "photo",
+    "gallery",
+    "responsive",
+    "HTML5",
+    "FrontEnd"
+  ],
+  "files": [
+    "coffeescript",
+    "img",
+    "jade",
+    "scss"
+  ],
+  "bin": {
+    "gulp": "./gulpfile.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run-script photogallery"
+  },
+  "engineStrict": false,
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/gulpjs/gulp/master/LICENSE"
+    }
+  ]
+}

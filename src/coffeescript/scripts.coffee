@@ -1,28 +1,26 @@
-# Assignment:
-number   = 42
-opposite = true
+num_fotos = 50
 
-# Conditions:
-number = -42 if opposite
+AddEvent = (elem, event_name, cb) ->
+  if elem.addEventListener
+    elem.addEventListener event_name, cb, false
+  else if elem.attachEvent
+    elem.attachEvent "on#{event_name}", cb
 
-# Functions:
-square = (x) -> x * x
+liClick = () ->
+  document.getElementById('modal_img').src=this.src.replace('_thumb','')
+  document.getElementById('modal_div').style.display='block'
 
-# Arrays:
-list = [1, 2, 3, 4, 5]
+modalClick = () ->
+  document.getElementById('modal_div').style.display='none'
 
-# Objects:
-math =
-  root:   Math.sqrt
-  square: square
-  cube:   (x) -> x * square x
+modalClick()
+AddEvent(document.getElementById('modal_div'),'click',modalClick)
 
-# Splats:
-race = (winner, runners...) ->
-  print winner, runners
+htm = '<ul>\n'
+for x in [1..num_fotos] by 1
+  htm += '  <li><img id="foto_'+x+'" src="../img/img_'+(if x<10 then '0' else '')+x+'_thumb.jpg"></li>\n'
+htm += '</ul\n'
+document.getElementById('gallery').innerHTML = htm
 
-# Existence:
-alert "I knew it!" if elvis?
-
-# Array comprehensions:
-cubes = (math.cube num for num in list)
+for el in document.querySelectorAll("#gallery > ul > li > img")
+  AddEvent(el,'click',liClick)
