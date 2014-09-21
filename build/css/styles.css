@@ -48,6 +48,18 @@ p {
     padding: 0px;
     border: 1px solid black; }
 
+#menu_icon {
+  display: none;
+  margin: 25px 20px 0px 0px;
+  width: 40px;
+  height: 40px;
+  float: left;
+  background: #89A4B1 url(../img/menuicon.png) no-repeat;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+
 #sprite_menu {
   margin: 10px 0px 0px 0px;
   padding: 0px 0px 0px 23px;
@@ -55,77 +67,59 @@ p {
   height: 48px;
   float: right;
   background: url(../img/sprite_menu.gif) no-repeat; }
-
-#sprite_menu li {
-  display: inline;
-  margin: 0px;
-  padding: 0px; }
-
-#sprite_menu li a:link, #sprite_menu li a:visited {
-  float: left;
-  height: 48px;
-  text-indent: -9000px;
-  overflow: hidden; }
-
-#sprite_menu #menu_home a:link, #sprite_menu #menu_home a:visited {
-  left: 23px;
-  width: 76px;
-  background: url(../img/sprite_menu.gif) no-repeat -23px 0px; }
-
-#sprite_menu #menu_home a:hover, #sprite_menu #menu_home a:focus {
-  background: url(../img/sprite_menu.gif) no-repeat -23px -49px; }
-
-#sprite_menu #menu_home a:active {
-  background: url(../img/sprite_menu.gif) no-repeat -23px -98px; }
-
-#sprite_menu #menu_home.active a:link, #sprite_menu #menu_home.active a:visited {
-  background: url(../img/sprite_menu.gif) no-repeat -23px -147px;
-  cursor: default; }
-
-#sprite_menu #menu_about a:link, #sprite_menu #menu_about a:visited {
-  left: 99px;
-  width: 82px;
-  background: url(../img/sprite_menu.gif) no-repeat -99px 0px; }
-
-#sprite_menu #menu_about a:hover, #sprite_menu #menu_about a:focus {
-  background: url(../img/sprite_menu.gif) no-repeat -99px -49px; }
-
-#sprite_menu #menu_about a:active {
-  background: url(../img/sprite_menu.gif) no-repeat -99px -98px; }
-
-#sprite_menu #menu_about.active a:link, #sprite_menu #menu_about.active a:visited {
-  background: url(../img/sprite_menu.gif) no-repeat -99px -147px;
-  cursor: default; }
-
-#sprite_menu #menu_services a:link, #sprite_menu #menu_services a:visited {
-  left: 182px;
-  width: 97px;
-  background: url(../img/sprite_menu.gif) no-repeat -182px 0px; }
-
-#sprite_menu #menu_services a:hover, #sprite_menu #menu_services a:focus {
-  background: url(../img/sprite_menu.gif) no-repeat -182px -49px; }
-
-#sprite_menu #menu_services a:active {
-  background: url(../img/sprite_menu.gif) no-repeat -182px -98px; }
-
-#sprite_menu #menu_services.active a:link, #sprite_menu #menu_services.active a:visited {
-  background: url(../img/sprite_menu.gif) no-repeat -182px -147px;
-  cursor: default; }
-
-#sprite_menu #menu_contact a:link, #sprite_menu #menu_contact a:visited {
-  left: 281px;
-  width: 97px;
-  background: url(../img/sprite_menu.gif) no-repeat -281px 0px; }
-
-#sprite_menu #menu_contact a:hover, #sprite_menu #menu_contact a:focus {
-  background: url(../img/sprite_menu.gif) no-repeat -281px -49px; }
-
-#sprite_menu #menu_contact a:active {
-  background: url(../img/sprite_menu.gif) no-repeat -281px -98px; }
-
-#sprite_menu #menu_contact.active a:link, #sprite_menu #menu_contact.active a:visited {
-  background: url(../img/sprite_menu.gif) no-repeat -281px -147px;
-  cursor: default; }
+  #sprite_menu li {
+    display: inline;
+    margin: 0px;
+    padding: 0px; }
+  #sprite_menu li a:link, #sprite_menu li a:visited {
+    float: left;
+    height: 48px;
+    text-indent: -9000px;
+    overflow: hidden; }
+  #sprite_menu #menu_home a:link, #sprite_menu #menu_home a:visited {
+    left: 23px;
+    width: 76px;
+    background: url(../img/sprite_menu.gif) no-repeat -23px 0px; }
+  #sprite_menu #menu_home a:hover, #sprite_menu #menu_home a:focus {
+    background: url(../img/sprite_menu.gif) no-repeat -23px -49px; }
+  #sprite_menu #menu_home a:active {
+    background: url(../img/sprite_menu.gif) no-repeat -23px -98px; }
+  #sprite_menu #menu_home.active a:link, #sprite_menu #menu_home.active a:visited {
+    background: url(../img/sprite_menu.gif) no-repeat -23px -147px;
+    cursor: default; }
+  #sprite_menu #menu_about a:link, #sprite_menu #menu_about a:visited {
+    left: 99px;
+    width: 82px;
+    background: url(../img/sprite_menu.gif) no-repeat -99px 0px; }
+  #sprite_menu #menu_about a:hover, #sprite_menu #menu_about a:focus {
+    background: url(../img/sprite_menu.gif) no-repeat -99px -49px; }
+  #sprite_menu #menu_about a:active {
+    background: url(../img/sprite_menu.gif) no-repeat -99px -98px; }
+  #sprite_menu #menu_about.active a:link, #sprite_menu #menu_about.active a:visited {
+    background: url(../img/sprite_menu.gif) no-repeat -99px -147px;
+    cursor: default; }
+  #sprite_menu #menu_services a:link, #sprite_menu #menu_services a:visited {
+    left: 182px;
+    width: 97px;
+    background: url(../img/sprite_menu.gif) no-repeat -182px 0px; }
+  #sprite_menu #menu_services a:hover, #sprite_menu #menu_services a:focus {
+    background: url(../img/sprite_menu.gif) no-repeat -182px -49px; }
+  #sprite_menu #menu_services a:active {
+    background: url(../img/sprite_menu.gif) no-repeat -182px -98px; }
+  #sprite_menu #menu_services.active a:link, #sprite_menu #menu_services.active a:visited {
+    background: url(../img/sprite_menu.gif) no-repeat -182px -147px;
+    cursor: default; }
+  #sprite_menu #menu_contact a:link, #sprite_menu #menu_contact a:visited {
+    left: 281px;
+    width: 97px;
+    background: url(../img/sprite_menu.gif) no-repeat -281px 0px; }
+  #sprite_menu #menu_contact a:hover, #sprite_menu #menu_contact a:focus {
+    background: url(../img/sprite_menu.gif) no-repeat -281px -49px; }
+  #sprite_menu #menu_contact a:active {
+    background: url(../img/sprite_menu.gif) no-repeat -281px -98px; }
+  #sprite_menu #menu_contact.active a:link, #sprite_menu #menu_contact.active a:visited {
+    background: url(../img/sprite_menu.gif) no-repeat -281px -147px;
+    cursor: default; }
 
 @media screen and (max-width: 785px) {
   #container {
@@ -146,12 +140,17 @@ p {
   #container {
     width: 314px; }
   #sprite_menu {
-    display: block;
+    display: none;
     float: left;
-    margin: 10px auto;
+    margin: 0px;
+    padding: 0px;
     background: none;
     width: 97px;
     height: 195px; }
+  #sprite_menu.visible {
+    display: block; }
+  #menu_icon {
+    display: block; }
   #logo {
     margin: 0px auto;
     clear: none; }
@@ -163,12 +162,18 @@ p {
   #container {
     width: 157px; }
   #sprite_menu {
-    display: block;
+    display: none;
     float: left;
-    margin: 10px auto;
+    margin: 0px;
+    padding: 0px;
     background: none;
     width: 97px;
     height: 195px; }
+  #sprite_menu.visible {
+    display: block; }
+  #menu_icon {
+    display: block;
+    float: none; }
   #logo {
     margin: 0px auto;
     clear: none; }

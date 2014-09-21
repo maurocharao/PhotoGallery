@@ -1,4 +1,4 @@
-var AddEvent, el, htm, liClick, modalClick, num_fotos, x, _i, _j, _len, _ref;
+var AddEvent, el, htm, liClick, menuIconClick, modalClick, num_fotos, x, _i, _j, _len, _ref;
 
 num_fotos = 50;
 
@@ -22,6 +22,25 @@ modalClick = function() {
 modalClick();
 
 AddEvent(document.getElementById('modal_div'), 'click', modalClick);
+
+menuIconClick = function() {
+  var obj;
+  obj = document.getElementById('sprite_menu');
+  return obj.className = (obj.className !== 'visible' ? 'visible' : '');
+};
+
+AddEvent(document.getElementById('menu_icon'), 'click', menuIconClick);
+
+
+/*
+window_resize = () ->
+  g = document.getElementsByTagName('body')[0]
+  x = window.innerWidth || document.documentElement.clientWidth || g.clientWidth
+  y = window.innerHeight|| document.documentElement.clientHeight|| g.clientHeight
+  document.getElementById('sprite_menu').style.display = 'block' if x > 157*2
+
+AddEvent(window, 'resize', window_resize);
+ */
 
 htm = '<ul>\n';
 

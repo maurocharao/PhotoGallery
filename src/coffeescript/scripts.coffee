@@ -16,6 +16,22 @@ modalClick = () ->
 modalClick()
 AddEvent(document.getElementById('modal_div'),'click',modalClick)
 
+menuIconClick = () ->
+  obj = document.getElementById('sprite_menu')
+  obj.className = (if obj.className!='visible' then 'visible' else '')
+
+AddEvent(document.getElementById('menu_icon'),'click',menuIconClick)
+
+###
+window_resize = () ->
+  g = document.getElementsByTagName('body')[0]
+  x = window.innerWidth || document.documentElement.clientWidth || g.clientWidth
+  y = window.innerHeight|| document.documentElement.clientHeight|| g.clientHeight
+  document.getElementById('sprite_menu').style.display = 'block' if x > 157*2
+
+AddEvent(window, 'resize', window_resize);
+###
+
 htm = '<ul>\n'
 for x in [1..num_fotos] by 1
   htm += '  <li><img id="foto_'+x+'" src="../img/img_'+(if x<10 then '0' else '')+x+'_thumb.jpg"></li>\n'

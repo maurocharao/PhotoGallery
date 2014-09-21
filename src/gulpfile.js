@@ -11,21 +11,21 @@ var rename = require('gulp-rename');*/
 
 gulp.task('css', function() {
   return gulp.src('scss/*.scss')
-    .pipe(watch())
+    .pipe(watch('scss/*.scss'))
     .pipe(sass())
     .pipe(gulp.dest('../build/css'));
 });
 
 gulp.task('js', function() {
   return gulp.src('coffeescript/*.coffee')
-    .pipe(watch())
+    .pipe(watch('coffeescript/*.coffee'))
     .pipe(coffee({bare: true}))
     .pipe(gulp.dest('../build/javascript'));
 });
 
 gulp.task('html', function() {
   return gulp.src('jade/*.jade')
-    .pipe(watch())
+    .pipe(watch('jade/*.jade'))
     .pipe(jade({
       pretty: true
     }))
@@ -34,7 +34,7 @@ gulp.task('html', function() {
 
 gulp.task('img', function () {
   /*return gulp.src('img/*.{gif,jpg,png,svg}')
-    .pipe(watch())
+    .pipe(watch('img/*.{gif,jpg,png,svg}'))
     //.pipe(gm(function (gmfile) { return gmfile.resize(100, 100); }))
     .pipe(imageResize({ format: 'jpeg', width: 100, height:100 }))
     //.pipe(rename(function (path) { path.basename += "-thumb"; }))
