@@ -2,6 +2,37 @@ body {
   margin: 0px;
   padding: 0px; }
 
+#footer {
+  margin: 55px auto 0px auto;
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+  border-top: 1px solid black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal; }
+
+#pagination, #modal_div ul {
+  margin: 0px auto;
+  padding: 0px;
+  text-align: center;
+  list-style-type: none; }
+  #pagination li, #modal_div ul li {
+    cursor: pointer;
+    float: left;
+    margin: 0px 0px 0px 5px;
+    padding: 6px 0px 0px 0px;
+    width: 32px;
+    height: 26px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-image: url(../img/sprite_buttons.png);
+    background-repeat: no-repeat; }
+  #pagination li:hover, #pagination li:focus, #modal_div ul li:hover, #modal_div ul li:focus {
+    background-position: -33px 0px; }
+  #pagination li:active, #pagination li.active, #modal_div ul li:active, #modal_div ul li.active {
+    background-position: -33px -256px; }
+
 #modal_div {
   position: fixed;
   top: 0px;
@@ -13,6 +44,15 @@ body {
   z-index: 101; }
   #modal_div img {
     width: 100%; }
+  #modal_div ul {
+    float: right;
+    margin-bottom: 10px; }
+  #modal_div h2 {
+    float: left;
+    margin: 0px auto;
+    padding: 0px;
+    font-family: 'Squada One', cursive;
+    font-size: 24px; }
 
 #topo {
   z-index: 100; }
@@ -71,6 +111,9 @@ p {
     display: inline;
     margin: 0px;
     padding: 0px; }
+    #sprite_menu li a {
+      background-image: url(../img/sprite_menu.gif);
+      background-repeat: no-repeat; }
   #sprite_menu li a:link, #sprite_menu li a:visited {
     float: left;
     height: 48px;
@@ -79,46 +122,46 @@ p {
   #sprite_menu #menu_home a:link, #sprite_menu #menu_home a:visited {
     left: 23px;
     width: 76px;
-    background: url(../img/sprite_menu.gif) no-repeat -23px 0px; }
+    background-position: -23px 0px; }
   #sprite_menu #menu_home a:hover, #sprite_menu #menu_home a:focus {
-    background: url(../img/sprite_menu.gif) no-repeat -23px -49px; }
+    background-position: -23px -49px; }
   #sprite_menu #menu_home a:active {
-    background: url(../img/sprite_menu.gif) no-repeat -23px -98px; }
+    background-position: -23px -98px; }
   #sprite_menu #menu_home.active a:link, #sprite_menu #menu_home.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -23px -147px;
+    background-position: -23px -147px;
     cursor: default; }
   #sprite_menu #menu_about a:link, #sprite_menu #menu_about a:visited {
     left: 99px;
     width: 82px;
-    background: url(../img/sprite_menu.gif) no-repeat -99px 0px; }
+    background-position: -99px 0px; }
   #sprite_menu #menu_about a:hover, #sprite_menu #menu_about a:focus {
-    background: url(../img/sprite_menu.gif) no-repeat -99px -49px; }
+    background-position: -99px -49px; }
   #sprite_menu #menu_about a:active {
-    background: url(../img/sprite_menu.gif) no-repeat -99px -98px; }
+    background-position: -99px -98px; }
   #sprite_menu #menu_about.active a:link, #sprite_menu #menu_about.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -99px -147px;
+    background-position: -99px -147px;
     cursor: default; }
   #sprite_menu #menu_services a:link, #sprite_menu #menu_services a:visited {
     left: 182px;
     width: 97px;
-    background: url(../img/sprite_menu.gif) no-repeat -182px 0px; }
+    background-position: -182px 0px; }
   #sprite_menu #menu_services a:hover, #sprite_menu #menu_services a:focus {
-    background: url(../img/sprite_menu.gif) no-repeat -182px -49px; }
+    background-position: -182px -49px; }
   #sprite_menu #menu_services a:active {
-    background: url(../img/sprite_menu.gif) no-repeat -182px -98px; }
+    background-position: -182px -98px; }
   #sprite_menu #menu_services.active a:link, #sprite_menu #menu_services.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -182px -147px;
+    background-position: -182px -147px;
     cursor: default; }
   #sprite_menu #menu_contact a:link, #sprite_menu #menu_contact a:visited {
     left: 281px;
     width: 97px;
-    background: url(../img/sprite_menu.gif) no-repeat -281px 0px; }
+    background-position: -281px 0px; }
   #sprite_menu #menu_contact a:hover, #sprite_menu #menu_contact a:focus {
-    background: url(../img/sprite_menu.gif) no-repeat -281px -49px; }
+    background-position: -281px -49px; }
   #sprite_menu #menu_contact a:active {
-    background: url(../img/sprite_menu.gif) no-repeat -281px -98px; }
+    background-position: -281px -98px; }
   #sprite_menu #menu_contact.active a:link, #sprite_menu #menu_contact.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -281px -147px;
+    background-position: -281px -147px;
     cursor: default; }
 
 @media screen and (max-width: 785px) {

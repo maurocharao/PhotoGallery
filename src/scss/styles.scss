@@ -14,6 +14,40 @@ body {
   margin:0px;
   padding:0px;
 }
+#footer {
+  margin:55px auto 0px auto;
+  padding:10px 0px 0px 0px;
+  text-align:center;
+  border-top:1px solid black;
+  font-family:'Open Sans', sans-serif;
+  font-size:12px;
+  font-weight:normal;
+}
+#pagination, #modal_div ul {
+  margin:0px auto;
+  padding:0px;
+  text-align:center;
+  list-style-type:none;
+  li {
+    cursor:pointer;
+    float:left;
+    margin:0px 0px 0px $pic_margin+px;
+    padding:6px 0px 0px 0px;
+    width:32px;
+    height:26px;
+    font-family:'Open Sans', sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    background-image:url(../img/sprite_buttons.png);
+    background-repeat:no-repeat;
+  }
+  li:hover, li:focus {
+    background-position: -33px 0px;
+  }
+  li:active, li.active {
+    background-position: -33px -256px;
+  }
+}
 #modal_div {
   position:fixed;
   top:0px;
@@ -25,6 +59,17 @@ body {
 	z-index: 101;
   img {
     width:100%;
+  }
+  ul {
+    float:right;
+    margin-bottom:10px;
+  }
+  h2 {
+    float: left;
+    margin:0px auto;
+    padding:0px;
+    font-family: 'Squada One', cursive;
+    font-size:24px;
   }
 }
 #topo {
@@ -84,6 +129,10 @@ p {
     display: inline;
     margin:0px;
     padding:0px;
+    a {
+      background-image:url(../img/sprite_menu.gif);
+      background-repeat:no-repeat;
+    }
   }
   li a:link, li a:visited {
     float:left;
@@ -95,68 +144,68 @@ p {
     a:link, a:visited {
       left: 23px;
       width: 76px;
-      background: url(../img/sprite_menu.gif) no-repeat -23px 0px;
+      background-position: -23px 0px;
     }
     a:hover, a:focus {
-      background: url(../img/sprite_menu.gif) no-repeat -23px -49px;
+      background-position: -23px -49px;
     }
     a:active {
-      background: url(../img/sprite_menu.gif) no-repeat -23px -98px;
+      background-position: -23px -98px;
     }
   }
   #menu_home.active a:link, #menu_home.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -23px -147px;
+    background-position: -23px -147px;
     cursor: default;
   }
   #menu_about {
     a:link, a:visited {
       left: 99px;
       width: 82px;
-      background: url(../img/sprite_menu.gif) no-repeat -99px 0px;
+      background-position: -99px 0px;
     }
     a:hover, a:focus {
-      background: url(../img/sprite_menu.gif) no-repeat -99px -49px;
+      background-position: -99px -49px;
     }
     a:active {
-      background: url(../img/sprite_menu.gif) no-repeat -99px -98px;
+      background-position: -99px -98px;
     }
   }
   #menu_about.active a:link, #menu_about.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -99px -147px;
+    background-position: -99px -147px;
     cursor: default;
   }
   #menu_services {
     a:link, a:visited {
       left: 182px;
       width: 97px;
-      background: url(../img/sprite_menu.gif) no-repeat -182px 0px;
+      background-position: -182px 0px;
     }
     a:hover, a:focus {
-      background: url(../img/sprite_menu.gif) no-repeat -182px -49px;
+      background-position: -182px -49px;
     }
     a:active {
-      background: url(../img/sprite_menu.gif) no-repeat -182px -98px;
+      background-position: -182px -98px;
     }
   }
   #menu_services.active a:link, #menu_services.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -182px -147px;
+    background-position: -182px -147px;
     cursor: default;
   }
   #menu_contact {
     a:link, a:visited {
       left: 281px;
       width: 97px;
-      background: url(../img/sprite_menu.gif) no-repeat -281px 0px;
+      background-position: -281px 0px;
     }
     a:hover, a:focus {
-      background: url(../img/sprite_menu.gif) no-repeat -281px -49px;
+      background-position: -281px -49px;
     }
     a:active {
-      background: url(../img/sprite_menu.gif) no-repeat -281px -98px;
+      background-position: -281px -98px;
     }
   }
   #menu_contact.active a:link, #menu_contact.active a:visited {
-    background: url(../img/sprite_menu.gif) no-repeat -281px -147px;
+    background-position: -281px -147px;
     cursor: default;
   }
 }

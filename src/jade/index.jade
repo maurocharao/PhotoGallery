@@ -24,6 +24,16 @@ html(lang="en")
         This Photo Gallery is a collection of Beautiful nature pictures
         including many species of animals
       #gallery
+      ul#pagination
+      #footer.
+        &copy; 2014 Nature's Beauty Creations Ltd.<br>
+        Address: P.O. Box 1, Millewa, Horana. Sri Lanka.<br>
+        All rights reserved
     #modal_div
-      img(id='modal_img' src='')
+      h2#modal_title Picture
+      ul
+        li#modal_previous(title='Use Navigation Keys') &laquo;
+        li#modal_next(title='Use Navigation Keys') &raquo;
+        li#modal_close(title='Use Esc Key') X
+      img#modal_img(src='blank.gif' alt='')
     script(src='../javascript/scripts.js')
